@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+EC2InstanceSecurityGroup:
+Type: AWS::EC2::SecurityGroup
+Properties:
+GroupDescription: Security group for the EC2 instance
+SecurityGroupIngress:
+- IpProtocol: tcp
+FromPort: 80
+ToPort: 80
+CidrIp: 0.0.0.0/0
+EC2Instance:
+Type: AWS::EC2::Instance
+Properties:
+ImageId: ami-0c94855ba95c71c99 # Amazon Linux 2 AMI ID
+InstanceType: t2.micro
+KeyName: vockey # Key pair name
+SecurityGroupIds:
+- !Ref EC2InstanceSecurityGroup
+BlockDeviceMappings:
+- DeviceName: /dev/xvda
+Ebs:
+VolumeSize: '20' # 20GB volume size
+VolumeType: gp2
+UserData:
+Fn::Base64: !Sub |
+#!/bin/bash
+yum update -y
+yum install -y docker git
+service docker start
+usermod -a -G docker ec2-user
+Outputs:
+InstanceId:
+Value: !Ref EC2Instance
+Description: ID of the created EC2 instance
+SecurityGroupId:
+Value: !Ref EC2InstanceSecurityGroup
+Description: ID of the created security group
