@@ -48,7 +48,7 @@ Deploy the containerized application to a new ec2 instance.
 Deploy the containerized application to an ec2 provisioned by CloudFormation.
 
 1. Copy and fix the indentation of the template to a new [file](IAC/infrastructure.yaml) in the repository.
-2. Add SSH access to SecurityIngressIngress
+2. Add SSH access to SecurityGroupIngress
    
 ``` yaml
 - IpProtocol: tcp
