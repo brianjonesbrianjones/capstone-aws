@@ -30,9 +30,9 @@ CMD ["nginx", "-g", "daemon off;"]
 
 Deploy the containerized application to a new ec2 instance.
 
-1. Provision an ec2 named console-ec2
+1. Provision an ec2 named console-ec2.
 ![Alt text](screenshots/console-ec2-overview.png)
-2. Make sure that SSH is accessible
+2. Make sure that SSH is accessible.
 ![Alt text](screenshots/console-ec2-security.png)
 3. Install git and docker on the ec2.
 ![Alt text](screenshots/console-ec2-docker-yum-install.png)
@@ -52,9 +52,9 @@ Deploy the containerized application to an ec2 provisioned by CloudFormation.
    
 ``` yaml
 - IpProtocol: tcp
-   FromPort: 22
-   ToPort: 22
-   CidrIp: 0.0.0.0/0
+  FromPort: 22
+  ToPort: 22
+  CidrIp: 0.0.0.0/0
 ```
 3. Upload the template to CloudFormation and follow the steps in the wizard.
 ![Alt text](screenshots/cloud-formation.png)
@@ -69,4 +69,4 @@ Deploy the containerized application to an ec2 provisioned by CloudFormation.
 
 ## Key Takeaways
 
-Docker is a powerful tool for containerizing and running applications on a variety of platforms. This capstone showed that this can be accomplish both manually and using a CloudFormation template to provision an appropriate ec2 server and associated security group. Also, this capstone demonstrated the power of having a git repository to push updates to and from which to pull code and updates and deploying it to multiple locations.
+Docker is a powerful tool for containerizing and running applications on a variety of platforms. When moving towards production, this capstone showed that this can be accomplish both manually and using a CloudFormation template to provision an appropriate ec2 server and associated security group. Also, this capstone demonstrated the power of having a git repository to push updates to and from which to pull code and updates and deploying it to multiple locations.
