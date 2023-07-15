@@ -16,6 +16,6 @@ I made two changes to the main index.html page. I changed the title from "Full S
 
 After cloning the repository to my local machine from Jamal's github I then removed the original orgin. I then set the orgin to a newly created repository under my own GitHub account and push all the project files up to that repository.
 
-(screensots/github-screenshot.png)
+(./screenshots/github-screenshot.png)
 
 ### 
