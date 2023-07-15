@@ -1,5 +1,7 @@
 # Capstone 2
 
+This project demonstrates the use of git, CloudFormation and Docker in the deployment of 
+
 ## Project Workflow
 
 ### Web Application Update
@@ -69,4 +71,4 @@ Deploy the containerized application to an ec2 provisioned by CloudFormation.
 
 ## Key Takeaways
 
-Docker is a powerful tool for containerizing and running applications on a variety of platforms. When moving towards production, this capstone showed that this can be accomplish both manually and using a CloudFormation template to provision an appropriate ec2 server and associated security group. Also, this capstone demonstrated the power of having a git repository to push updates to and from which to pull code and updates and deploying it to multiple locations. In all, this project demonstrated the power and utility of both docker and git.
+Docker is a powerful tool for containerizing and running applications on a variety of platforms. When moving towards production, this capstone showed that this can be accomplish both manually and using a CloudFormation template to provision an appropriate ec2 server and associated security group. Also, this capstone demonstrated the power of having a git repository to push updates to and from which to pull code and updates and deploying it to multiple locations. In all, this project demonstrated the power and utility of both docker and git as well as CloudFormation.
