@@ -18,7 +18,7 @@ After cloning the repository to my local machine from Jamal's github I then remo
 
 I created a [dockerfile](Dockerfile) containing instructions on how to build an image using this codebase and a standard nginx image from dockerhub. I first ran this image locally, observing that it worked correctly and that the website was loading properly before I added and pushed the dockerfile to my repository.
 
-``` docker
+``` Dockerfile
 #Using the official Nginx base image
 FROM nginx
 #Copy website code to the container
