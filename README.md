@@ -1,6 +1,6 @@
 # Capstone 2
 
-This project demonstrates the use of git, CloudFormation and Docker in the deployment of 
+This project demonstrates the use of git, CloudFormation and Docker in the deployment of a static website.
 
 ## Project Workflow
 
